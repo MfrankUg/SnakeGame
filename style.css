@@ -1,0 +1,129 @@
+/* Reset and Base Styling */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #2c3e50;
+}
+
+.game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Canvas Styling */
+canvas {
+    border: 2px solid #ecf0f1;
+    background-color: #34495e;
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Start Screen Styling */
+.start-screen {
+    text-align: center;
+    color: #ecf0f1;
+    margin-bottom: 20px;
+}
+
+.start-screen h1 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+.start-screen button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    background-color: #e74c3c;
+    color: #ecf0f1;
+    border: none;
+    border-radius: 5px;
+}
+
+/* Score Styling */
+.score {
+    text-align: left;
+    margin-bottom: 20px;
+    color: #ecf0f1;
+    width: 100%;
+    max-width: 600px;
+}
+
+.score h2 {
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+.score button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    background-color: #e74c3c;
+    color: #ecf0f1;
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+/* Controls (Mobile Only by Default Hidden) */
+.controls {
+    display: none; /* Hidden by default */
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.controls button {
+    padding: 15px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    background-color: #e74c3c;
+    color: #ecf0f1;
+    border: none;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+/* Responsive Styles for Mobile */
+@media (max-width: 600px) {
+    canvas {
+        width: 90%;
+        height: auto;
+    }
+
+    .controls {
+        display: flex; /* Show on small/mobile screens */
+    }
+
+    .controls button {
+        padding: 10px;
+        font-size: 1.2rem;
+    }
+
+    .score h2 {
+        font-size: 1rem;
+    }
+
+    .start-screen h1 {
+        font-size: 1.5rem;
+    }
+
+    .start-screen button {
+        font-size: 0.9rem;
+    }
+}
+
+/* Optional: Prevent controls on larger screens explicitly */
+@media (min-width: 601px) {
+    .controls {
+        display: none !important;
+    }
+}
